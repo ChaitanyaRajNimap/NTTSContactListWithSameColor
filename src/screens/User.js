@@ -1,11 +1,12 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Button} from 'react-native';
 
-const User = ({navigation}) => {
+const User = ({navigation, route}) => {
+  const {item} = route.params;
   return (
     <View style={styles.rootContainer}>
-      <Text style={styles.heading}>User Screen</Text>
-      <Button title="Go to User" onPress={() => navigation.navigate('User')} />
+      <Text style={styles.heading}>Welcome {item}!</Text>
+      <Button title="Go to User" onPress={() => navigation.goBack()} />
     </View>
   );
 };
@@ -16,10 +17,12 @@ const styles = StyleSheet.create({
   rootContainer: {
     flex: 1,
     alignItems: 'center',
+    backgroundColor: '#2A3035',
     justifyContent: 'center',
   },
   heading: {
-    color: '#000',
+    marginBottom: 10,
+    color: '#fff',
     fontSize: 25,
     fontWeight: 'bold',
   },

@@ -11,8 +11,32 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="ContactList" component={ContactList} />
-        <Stack.Screen name="User" component={User} />
+        <Stack.Screen
+          name="ContactList"
+          component={ContactList}
+          options={{
+            headerStyle: {
+              backgroundColor: '#202329',
+            },
+            headerTintColor: '#EBEFF1',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Stack.Screen
+          name="User"
+          component={User}
+          options={{
+            headerStyle: {
+              backgroundColor: '#202329',
+            },
+            headerTintColor: '#EBEFF1',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
