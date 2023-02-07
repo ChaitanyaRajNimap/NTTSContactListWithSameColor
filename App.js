@@ -1,5 +1,4 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import ContactList from './src/screens/ContactList';
@@ -43,16 +42,3 @@ const App = () => {
 };
 
 export default App;
-
-const styles = StyleSheet.create({
-  rootContainer: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  heading: {
-    color: '#000',
-    fontSize: 25,
-    fontWeight: 'bold',
-  },
-});
