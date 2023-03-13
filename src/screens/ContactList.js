@@ -86,24 +86,11 @@ const ContactList = ({navigation}) => {
     },
   ];
 
-  const handleClick = item => {
-    return navigation.navigate('User', {
-      item: item,
-    });
-  };
-
   return (
     <View style={styles.rootContainer}>
       <FlatList
         data={contactList}
-        renderItem={({item}) => (
-          <ListItem
-            item={item}
-            onPress={() => {
-              return handleClick(item);
-            }}
-          />
-        )}
+        renderItem={({item}) => <ListItem item={item} onPress={() => {}} />}
         keyExtractor={item => item.email}
         style={styles.flatlist}
       />
