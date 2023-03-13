@@ -2,11 +2,8 @@ import React from 'react';
 import {Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
 
 function ListItem({item, onPress}) {
-  let bgColor = item.id % 2 === 0 ? styles.grey : styles.black;
   return (
-    <TouchableOpacity
-      onPress={onPress}
-      style={[styles.contactContainer, bgColor]}>
+    <TouchableOpacity onPress={onPress} style={styles.contactContainer}>
       <Image
         source={{
           uri: item.picture,
@@ -30,6 +27,8 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
+    backgroundColor: '#202329',
+    borderColor: '#202329',
   },
   contactText: {
     marginLeft: 15,
@@ -43,13 +42,5 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 25,
     marginLeft: 5,
-  },
-  grey: {
-    backgroundColor: '#54585D',
-    borderColor: '#54585D',
-  },
-  black: {
-    backgroundColor: '#202329',
-    borderColor: '#202329',
   },
 });
